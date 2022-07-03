@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', sans-serif;
+	background-color: #f4f7fc;
+}
+*---------------------------Preloader------------------------------------*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #800080;
+  border-top-color: #ffdf00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 2s linear infinite;
+  animation: animate-preloader 2s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.page-not-found{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.page-not-found img{
+	height: 300px;
+}
+.page-not-found h1{
+	color: #e36c6c;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 30px;
+	margin: 50px 0 0 0;
+}
+.page-not-found p{
+	color: #7742d4;
+	font-weight: 600;
+	font-size: 15px;
+	width: 80%;
+	text-align: center;
+	margin: 5px;
+}
+.page-not-found button{
+	width: 200px;
+	height: 40px;
+	margin: 10px;
+	background-color: #e36c6c;
+	color: #fff;
+	text-transform: uppercase;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 25px;
+	letter-spacing: 1px;
+	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+@media(max-width: 900px){
+	.page-not-found img{
+		height: 180px;
+	}
+	.page-not-found p{
+		width: 100%;
+	}
+}
+@media(max-width: 600px){
+	.page-not-found{
+		width: 100%;
+	}
+	.page-not-found img{
+		height: 120px;
+	}
+	.page-not-found p{
+		width: 90%;
+	}
+	.page-not-found h1{
+		font-size: 18px;
+	}
+}
