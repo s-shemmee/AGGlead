@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/sign-in.css">
+    <title>Sign in</title>
+</head>
+<body>
+<!-- ======= Preloader ======= -->
+
+<div id="preloader"></div>
+    
+<section>
+    <div class="container">
+        <div class="signin">
+            <div class="img">
+                <a href="https://storyset.com/user"><img src="assets/img/login.svg" alt="sing in image"></a>
+            </div>
+            <div class="form">
+                <form>
+                    <h2>Welcome back!</h2>
+                    <div class="input-div email">
+                       <div class="i"> 
+                            <i class="fas fa-envelope"></i>
+                       </div>
+                       <div class="div">
+                            <input type="email" name="email" class="input" placeholder="Email">
+                       </div>
+                    </div>
+                    <div class="input-div pass">
+                       <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                       </div>
+                       <div class="div">
+                            <input type="password" name="password" id="password" class="input" placeholder="Password">
+                            <span>
+                                <i class="far fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                            </span>
+                       </div>
+                    </div>
+                </form>
+                <div class="remember">
+                    <input type="checkbox" value="lsRememberMe" id="rememberMe" class="checkbox">
+                    <label for="rememberMe">Remember me</label>
+                </div>   
+                    <input type="submit" class="btn" value="Sign In" onclick="lsRememberMe()">
+                    <p class="forgot"><a href="forgotpass.html">Forgot Password?</a></p>
+                    <p class="social-text">Or Sign in with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>                    
+                    <p class="signup">don't have an account? <a href="sign-up.html">Sign Up</a></p>
+                </form>
+            </div>
+         </div>
+    </div>           
+</section>
+<script type="text/javascript" src="assets/js/signin.js"></script>
+
+</body>
+</html>

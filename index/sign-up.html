@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
+    <title>Sign Up</title>
+</head>
+<body>
+<!-- ======= Preloader ======= -->
+
+<div id="preloader"></div> 
+  
+<section>
+    <div class="container">
+        <div class="signup">           
+            <div class="form">
+                <form action="signup-back.php">
+                    <h2>Hello There!</h2>
+
+                        <div class="input-div" data-error="Sorry,that name is taken.">
+                            <div class="i">
+                                <i class="fa fa-user"></i>
+                            </div>
+                        <div class="div">
+                                <input type="text" class="input" name="name" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required placeholder="Full Name">
+                        </div>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="input-div email">
+                            <div class="i">
+                                <i class="fa fa-envelope"></i>
+                            </div> 
+                            <div class="div"> 
+                                <input type="email" id="email" name="Email" class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Email">
+                            </div>    
+                            <span class="error">
+                                <?php echo $_SESSION['mail_errors']; 
+                                $_SESSION['mail_errors']='';?>
+                            </span>
+                        </div>
+
+
+                        <div class="input-div pass">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="div">
+                                <input minlength="8" type="password" id="password" name="password" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Password">
+                            </div>    
+                            <span>
+                                <i class="far fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                            </span>                            
+                            <span class="error">
+                                <?php echo $_SESSION['pass_errors']; 
+                                $_SESSION['pass_errors']='';?>
+                            </span>
+                        </div>
+
+                        <div class="input-div pass">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="div">
+                                <input type="password" name="password" class="input" required placeholder="Confirm Password">
+                            </div>    
+                             <span>
+                                <i class="far fa-eye" aria-hidden="true" id="font" onclick="togglePW()"></i>
+                            </span>                           
+                            <span class="error">
+                                <?php echo $_SESSION['mail_errors']; 
+                                $_SESSION['mail_errors']='';?>
+                            </span>
+                        </div>
+                                          
+
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="div">
+                                <input type="tel" id="phone" name="tel" class="input" placeholder="Phone Number"> 
+                            </div>                              
+                        </div>
+
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fa fa-globe"></i>
+                            </div>  
+                            <div class="div"> 
+                                <input type="text" name="country" class="input" placeholder="Country">
+                            </div>
+                        </div>
+                    <input type="submit" class="btn" value="Sign Up">
+                    <p class="social-text">By clicking Sign Up, you agree to our <a href="Terms and Conditions.html">Terms and Conditions of use.</a></p>                 
+                    <p class="social-text">Or Sign up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>                    
+                    <p class="signin">have an account? <a href="sign-in.html">Sign In</a></p>
+                </form>
+            </div>
+            <div class="img">
+                <a href="https://storyset.com/user"><img src="assets/img/register.svg" alt="sing up image"></a>
+            </div>             
+         </div>
+    </div>           
+</section>
+<script type="text/javascript" src="assets/js/signin.js"></script>
+</body>
+</html>
